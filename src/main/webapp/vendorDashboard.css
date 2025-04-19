@@ -1,0 +1,560 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #219150;
+    color: white;
+    width: 250px;
+    height: 100vh;
+    padding-top: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar .logo-box {
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.sidebar .logo-box .fresh {
+    color: #e67e22;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.sidebar .logo-box .cart {
+    color: #219150;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.sidebar .welcome-msg {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 25px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: block;
+}
+
+/* Sidebar Link Hover Effect */
+.sidebar ul li a:hover {
+    text-decoration: underline;
+    text-underline: #1b7a39;
+}
+
+
+/* Main Content */
+.main-content {
+    margin-left: 260px;
+    padding: 30px;
+}
+
+h1, h2 {
+    color: #219150;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.actions button, .order-status button {
+    background-color: #e67e22;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.actions button:hover, .order-status button:hover {
+    background-color: #c35e1d;
+}
+
+/* Table for Pending Orders */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #219150;
+    color: white;
+}
+
+td {
+    background-color: #fff;
+}
+
+button {
+    background-color: #219150;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #1b7a39;
+}
+
+
+
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Modal Content Styling */
+.modal-content h2 {
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content button,
+.modal-content select{
+    width: 100%;
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.modal-content textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+/* Close Button */
+.close-btn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: -1em;
+    margin-right: -1em;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+.product-scroll-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-height: 660px;
+    overflow-y: auto;
+    /*padding: 20px;*/
+    /*border: 1px solid #ccc;*/
+    border-radius: 10px;
+    scroll-behavior: smooth; /* Smooth scroll */
+}
+
+/* Smooth, styled scrollbar for Webkit (Chrome, Edge, Safari) */
+.product-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.product-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.product-scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.product-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+/* Ensure all product cards are same size */
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    height: 200px; /* Fixed height */
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+.product-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .product-scroll-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .product-scroll-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product-scroll-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product-scroll-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Modal styles */
+.modalforproduct {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    z-index: 1001;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+
+
+/* Overlay */
+.modalforproductoverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+
+
+
+
+/* Ensure the modal has a max width */
+.modalforproduct-content {
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+/* Control image size */
+.modalforproduct-content img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 8px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+product-modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 15px;
+    width: 60%;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+
+
+
+
+
+
+
+
+/* Confirm Delete Modal */
+#confirmDeleteModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 360px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1002;
+    display: none;
+    padding: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#confirmDeleteModal h2 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+#confirmDeleteModal p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#confirmDeleteModal input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#confirmDeleteModal button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#confirmDeleteModal button[type="submit"] {
+    background-color: #e53935;
+    color: white;
+}
+
+#confirmDeleteModal .cancel-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+#confirmDeleteModal .close-btn {
+    position: absolute;
+    right: 34px;
+    top: 32px;
+    font-size: 22px;
+    color: #999;
+    cursor: pointer;
+}
+
+#confirmDeleteModal .close-btn:hover {
+    color: black;
+    transition: 0.2s;
+}
+
+
+
+
+
+
+
+
+.stat-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 20%;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    font-size: 18px;
+    color: #219150; /* Green color */
+    font-weight: 600;
+}
+
+.stat-card p {
+    font-size: 24px;
+    color: #333;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.stat-card ul {
+    list-style-type: none;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+.stat-card ul li {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+

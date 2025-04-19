@@ -1,0 +1,943 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #219150; /* Green color for sidebar */
+    color: white;
+    width: 250px;
+    height: 100%;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-box {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.fresh {
+    color: #e67e22; /* Orange color */
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.cart {
+    color: #219150; /* Green color */
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.sidebar-header p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-menu li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.sidebar-menu a {
+    color: white;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.sidebar-menu a:hover {
+    background-color: #e67e22; /* Hover effect */
+    border-radius: 5px;
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+    background-color: #f4f4f9;
+    flex: 1;
+}
+
+header {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: #219150; /* Green color */
+    font-size: 28px;
+    font-weight: 600;
+}
+
+header .intro-text {
+    font-size: 16px;
+    color: #777;
+    font-weight: 400;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #e67e22; /* Orange color */
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #d86c18;
+}
+
+.btn-secondary {
+    background-color: #219150;
+    color: white;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #1a7c41;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+.footer {
+    background-color: #219150; /* Green color */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Ensure footer stays at bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+}
+
+
+
+
+
+
+/* Dashboard Overview Section */
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.stat-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card h3 {
+    font-size: 18px;
+    color: #219150; /* Green color */
+    font-weight: 600;
+}
+
+.stat-card p {
+    font-size: 24px;
+    color: #333;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.stat-card ul {
+    list-style-type: none;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+.stat-card ul li {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+
+
+/* Modal Content for Add Vendor */
+
+.modal {
+    position: fixed;
+    z-index: 999; /* high value to appear on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* dimmed background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-vendor-modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Form Heading */
+.add-vendor-modal-title {
+    text-align: center;
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Label Styling */
+.add-vendor-label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Input Fields Styling */
+.add-vendor-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus Effect on Inputs */
+.add-vendor-input:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+}
+
+/* Button Styling */
+.add-vendor-submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-vendor-cancel-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #f45c5c;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Button Hover Effect */
+.add-vendor-submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Button Hover Effect */
+.add-vendor-cancel-btn:hover {
+    background-color: red;
+}
+
+/* Error Styling (Optional) */
+.add-vendor-error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    .add-vendor-modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .add-vendor-modal-title {
+        font-size: 22px;
+    }
+
+    .add-vendor-input {
+        font-size: 14px;
+    }
+
+    .add-vendor-submit-btn {
+        font-size: 14px;
+    }
+
+    .add-vendor-cancel-btn {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+product-modal-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 15px;
+    width: 60%;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+
+
+
+
+
+/* Modal */
+.editfromadminmodal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Modal Content Styling */
+.editfromadminmodal-content h2 {
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.editfromadminmodal-content input,
+.editfromadminmodal-content textarea,
+.editfromadminmodal-content button,
+.editfromadminmodal-content select{
+    width: 100%;
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.editfromadminmodal-content textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.editfromadminmodal-content button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.editfromadminmodal-content button:hover {
+    background-color: #45a049;
+}
+
+/* Confirm Delete Modal */
+#confirmDeleteModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 360px;
+    height: 230px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 1002;
+    display: none;
+    padding: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#confirmDeleteModal h2 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+#confirmDeleteModal p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#confirmDeleteModal input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#confirmDeleteModal button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#confirmDeleteModal button[type="submit"] {
+    background-color: #e53935;
+    color: white;
+}
+
+#confirmDeleteModal .cancel-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+#confirmDeleteModal .close-btn {
+    position: absolute;
+    right: 34px;
+    top: 32px;
+    font-size: 22px;
+    color: #999;
+    cursor: pointer;
+}
+
+#confirmDeleteModal .close-btn:hover {
+    color: black;
+    transition: 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.vendor-list-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+    gap: 16px;
+    max-height: none;
+    overflow-y: visible;
+}
+
+.scrollable-vendor-list {
+    max-height: 300px; /* Adjust height for the scroll */
+    overflow-y: auto;
+}
+
+.vendor-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.4s ease;
+}
+
+.vendor-card h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.vendor-card p {
+    margin: 0.2rem 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+
+.vendor-card:hover {
+    transform: scale(1.05); /* Zoom in by 5% */
+}
+
+
+
+
+
+
+/* Delete Vendor Modal Overlay */
+#deleteVendorModal.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Delete Vendor Modal Content */
+.delete-vendor-modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    animation: slideDownFade 0.3s ease-out;
+}
+
+@keyframes slideDownFade {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.delete-vendor-modal-content h2 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #d7263d;
+    text-align: center;
+}
+
+.delete-vendor-modal-content p {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.admin-delete-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.admin-delete-form input[type="password"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.admin-delete-form input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Delete Button */
+.delete-vendor-submit-btn {
+    background-color: #d7263d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-vendor-submit-btn:hover {
+    background-color: #b61e33;
+}
+
+/* Cancel Button */
+.delete-vendor-cancel-btn {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-vendor-cancel-btn:hover {
+    background-color: #aaa;
+}
+
+
+
+
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.add-vendor-input {
+    width: 100%;
+    padding-right: 40px;  /* Adjust this to make space for the icon */
+}
+
+.eye-icon {
+    position: absolute;
+    right: 10px;  /* Adjust the position to your liking */
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+/* Modal styles */
+.modalforproduct {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    z-index: 1001;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+
+
+/* Overlay */
+.modalforproductoverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+
+
+
+
+/* Ensure the modal has a max width */
+.modalforproduct-content {
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+
+/* Control image size */
+.modalforproduct-content img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 8px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+.product-scroll-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
+    gap: 20px;
+    max-height: 650px; /* About 3 rows of 260px-height cards */
+    overflow-y: auto;
+}
+
+/* Ensure all product cards are same size */
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    height: 200px; /* Fixed height */
+    box-sizing: border-box;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+.product-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+
+
+/* Overlay */
+.productmodel-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+/* Modal */
+.productmodel-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    font-family: 'Roboto', sans-serif;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Modal Content Styling */
+.productmodel-modal-content h2 {
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.productmodel-modal-content input,
+.productmodel-modal-content textarea,
+.productmodel-modal-content button,
+.productmodel-modal-content select{
+    width: 100%;
+    padding: 0.75em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.productmodel-modal-content textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.productmodel-modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.productmodel-modal-content button:hover {
+    background-color: #45a049;
+}
+
+/* Close Button */
+.close-btn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: -1em;
+    margin-right: -1em;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}

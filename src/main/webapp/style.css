@@ -1,0 +1,407 @@
+/* === Color Palette === */
+:root {
+    --green: #27AE60;
+    --light-green: #8ED1A8;
+    --soft-orange: #F39C12;
+    --white: #FFFFFF;
+    --dark-gray: #333333;
+    --light-gray: #F5F5F5;
+}
+
+/* === Reset & Base === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--white);
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === Navigation === */
+header {
+    background-color: var(--white);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--green);
+}
+
+.logo span {
+    color: var(--soft-orange);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+/* === Hero Section === */
+/* === Hero Section === */
+.hero {
+    background-image: url("./Images/FreshCart.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Ensure the background doesn’t repeat */
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    min-height: 540px; /* Or any height you prefer */
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: var(--green);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: var(--soft-orange);
+    color: var(--white);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e67e22;
+}
+
+/* === Features Section === */
+.features {
+    background-color: var(--white);
+    padding: 60px 0;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: var(--light-gray);
+    /*background-color: red;*/
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-left-style: solid;
+    border-left-width: thick;
+    border-left-color: var(--soft-orange);
+}
+
+.feature-card h3 {
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+
+.feature-image{
+    width: 100%;
+    border-style: none;
+    border-radius: 8px;
+}
+
+/* === Footer === */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    /*margin-top: 40px;*/
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .feature-grid {
+        flex-direction: column;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        display: inline-block;
+    }
+
+    .editbtn {
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+.container-footer
+{
+    width: 100%;
+    background-color: var(--green);
+    display: flex;
+    padding: 50px;
+}
+
+.footer-section
+{
+    padding: 30px;
+    background-color: var(--white);
+    width: 40%;
+}
+
+.In-touch{
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1450px) {
+
+    .map iframe {
+        width: 100%; /* Make map responsive */
+        height: 250px; /* Adjust map height */
+    }
+}
+
+@media (max-width: 768px) {
+    .container-footer {
+        flex-direction: column; /* Stack sections vertically */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .footer-section {
+        width: 100%; /* Full width for each section */
+        margin-bottom: 20px; /* Add space between footer sections */
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px; /* Spacing between social icons */
+    }
+
+    .map iframe {
+        width: 100%; /* Make map responsive */
+        height: 250px; /* Adjust map height */
+    }
+}
+
+@media (max-width: 480px) {
+    .In-touch {
+        font-size: 15px; /* Adjust font size for very small screens */
+    }
+
+    .footer-section {
+        padding: 20px; /* Reduced padding for very small screens */
+    }
+
+    .map iframe {
+        height: 200px; /* Further reduce map height on very small screens */
+    }
+}
+
+
+
+
+
+
+
+
+/* === Login Page Styles === */
+.login-body {
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: var(--white);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-title {
+    font-size: 1.8rem;
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+.login-subtitle {
+    font-size: 0.95rem;
+    color: var(--dark-gray);
+    margin-bottom: 25px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.login-form label {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+}
+
+.login-form input,
+.login-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.login-btn {
+    background-color: var(--green);
+    color: var(--white);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #219150;
+}
+
+.alt-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--green);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.alt-link:hover {
+    text-decoration: underline;
+    color: var(--soft-orange);
+}
+
+.register-text {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.register-text a {
+    color: var(--soft-orange);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* === Registration Page Layout === */
+.main-register {
+    padding: 60px 20px;
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 140px); /* Adjust for header and footer */
+}
+
+/* Adjust login-body style if used elsewhere */
+.login-body {
+    background-color: var(--light-gray);
+}
+
+/* Optional Enhancement */
+header, footer {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+/* === Main Auth Section (Register/Login) Wrapper === */
+.main-auth-section {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-gray);
+    padding: 50px 15px;
+}
+
+a {
+    text-decoration: none;
+    text-underline: none;
+    color: black;
+}
+
+.nav-links a.editbtn {
+    background-color: var(--soft-orange);
+    color: var(--white);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a.editbtn:hover {
+    background-color: #e67e22;
+}

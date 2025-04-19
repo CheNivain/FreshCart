@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <servlet>
+        <servlet-name>RegisterUserServlet</servlet-name>
+        <servlet-class>com.example.freshcart.RegisterUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterUserServlet</servlet-name>
+        <url-pattern>/registerUser</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegisterAdminServlet</servlet-name>
+        <servlet-class>com.example.freshcart.RegisterAdminServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegisterAdminServlet</servlet-name>
+        <url-pattern>/registerAdmin</url-pattern>
+    </servlet-mapping>
+
+    <!-- Define the EditProfileServlet -->
+    <servlet>
+        <servlet-name>EditProfileServlet</servlet-name>
+        <servlet-class>com.example.freshcart.EditProfileServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EditProfileServlet</servlet-name>
+        <url-pattern>/editProfile</url-pattern>
+    </servlet-mapping>
+
+    <!-- Define the DeleteProfileServlet -->
+    <servlet>
+        <servlet-name>DeleteProfileServlet</servlet-name>
+        <servlet-class>com.example.freshcart.DeleteProfileServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteProfileServlet</servlet-name>
+        <url-pattern>/deleteProfile</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!-- Define the EditRiderProfileServlet -->
+    <servlet>
+        <servlet-name>EditRiderProfileServlet</servlet-name>
+        <servlet-class>com.example.freshcart.EditRiderProfileServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EditRiderProfileServlet</servlet-name>
+        <url-pattern>/editRiderProfile</url-pattern>
+    </servlet-mapping>
+
+    <!-- Define the DeleteRiderProfileServlet -->
+    <servlet>
+        <servlet-name>DeleteRiderProfileServlet</servlet-name>
+        <servlet-class>com.example.freshcart.DeleteRiderProfileServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteRiderProfileServlet</servlet-name>
+        <url-pattern>/deleteRiderProfile</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AuthenticateInternalProfileServlet</servlet-name>
+        <servlet-class>com.example.freshcart.AuthenticateInternalProfileServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AuthenticateInternalProfileServlet</servlet-name>
+        <url-pattern>/authenticateProfile</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>VendorAdditionServlet</servlet-name>
+        <servlet-class>com.example.freshcart.VendorAdditionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>VendorAdditionServlet</servlet-name>
+        <url-pattern>/vendorAddition</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>EditVendor</servlet-name>
+        <servlet-class>com.example.freshcart.EditVendor</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EditVendor</servlet-name>
+        <url-pattern>/editVendor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteVendor</servlet-name>
+        <servlet-class>com.example.freshcart.DeleteVendor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteVendor</servlet-name>
+        <url-pattern>/deleteVendor</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddProduct</servlet-name>
+        <servlet-class>com.example.freshcart.AddProduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddProduct</servlet-name>
+        <url-pattern>/AddProduct</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddProductFromAdmin</servlet-name>
+        <servlet-class>com.example.freshcart.AddProductFromAdmin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddProductFromAdmin</servlet-name>
+        <url-pattern>/AddProductFromAdmin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EditProduct</servlet-name>
+        <servlet-class>com.example.freshcart.EditProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditProduct</servlet-name>
+        <url-pattern>/EditProduct</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>EditProductFromAdmin</servlet-name>
+        <servlet-class>com.example.freshcart.EditProductFromAdmin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EditProductFromAdmin</servlet-name>
+        <url-pattern>/EditProductFromAdmin</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>DeleteProduct</servlet-name>
+        <servlet-class>com.example.freshcart.DeleteProduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteProduct</servlet-name>
+        <url-pattern>/DeleteProduct</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteProductFromAdmin</servlet-name>
+        <servlet-class>com.example.freshcart.DeleteProductFromAdmin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteProductFromAdmin</servlet-name>
+        <url-pattern>/DeleteProductFromAdmin</url-pattern>
+    </servlet-mapping>
+
+</web-app>

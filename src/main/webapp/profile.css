@@ -1,0 +1,226 @@
+/* Modal base */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-form label {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.profile-form input {
+    padding: 10px 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.profile-form input:focus {
+    border-color: #00a86b;
+    outline: none;
+}
+
+.profbtn {
+    background-color: #00a86b;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profbtn:hover {
+    background-color: #00875a;
+}
+
+.profbtn.danger {
+    background-color: #ff4d4d;
+}
+
+.profbtn.danger:hover {
+    background-color: #cc0000;
+}
+
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-field input {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    user-select: none;
+}
+
+.profile-card {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.profile-info p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.alert {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.error {
+    background-color: #f44336;
+    color: white;
+}
+
+#deleteConfirmationOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete-confirmation-modal {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.confirm-password-input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 15px 0;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.confirm-password-input:focus {
+    border-color: #888;
+    outline: none;
+}
+
+.confirm-delete-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.confirmdeletebutton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.confirmdeletebutton.delete {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.confirmdeletebutton.delete:hover {
+    background-color: #c0392b;
+}
+
+.confirmdeletebutton.cancel {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.confirmdeletebutton.cancel:hover {
+    background-color: #27ae60;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
