@@ -45,8 +45,6 @@
         <url-pattern>/deleteProfile</url-pattern>
     </servlet-mapping>
 
-
-
     <!-- Define the EditRiderProfileServlet -->
     <servlet>
         <servlet-name>EditRiderProfileServlet</servlet-name>
@@ -129,11 +127,11 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>EditProduct</servlet-name>
+        <servlet-name>EditProductServlet</servlet-name>
         <servlet-class>com.example.freshcart.EditProductServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>EditProduct</servlet-name>
+        <servlet-name>EditProductServlet</servlet-name>
         <url-pattern>/EditProduct</url-pattern>
     </servlet-mapping>
 
