@@ -18,16 +18,10 @@ public class EditRiderProfileServlet extends HttpServlet {
         // Database connection setup
         Connection conn = null;
         PreparedStatement ps = null;
-        String jdbcURL = "jdbc:mysql://localhost:8889/freshcart";
-        String dbUsername = "root";
-        String dbPassword = "root";
 
         try {
-            // Step 1: Load MySQL JDBC Driver (if not already loaded)
-            Class.forName("com.mysql.cj.jdbc.Driver");
 
-            // Step 2: Establish a connection to the database
-            conn = DriverManager.getConnection(jdbcURL, dbUsername, dbPassword);
+            conn = DBConnection.getConnection();
 
             // Step 3: Update the user's information in the database
             String updateSQL = "UPDATE delivery_persons SET first_name = ?, last_name = ?, email = ?, phone_number = ?, password = ? WHERE username = ?";

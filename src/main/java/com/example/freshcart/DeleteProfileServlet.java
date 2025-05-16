@@ -18,19 +18,23 @@ public class DeleteProfileServlet extends HttpServlet {
             return;
         }
 
+        Connection conn = null;
+        PreparedStatement checkStmt = null;
+        PreparedStatement deleteStmt = null;
+        ResultSet rs = null;
+
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:8889/freshcart", "root", "root");
+            conn = DBConnection.getConnection();
 
             // Step 1: Check if password is correct
-            PreparedStatement checkStmt = conn.prepareStatement("SELECT * FROM customers WHERE username = ? AND password = ?");
+            checkStmt = conn.prepareStatement("SELECT * FROM customers WHERE username = ? AND password = ?");
             checkStmt.setString(1, username);
-            checkStmt.setString(2, confirmPassword); // Plaintext for now — hash this in production
-            ResultSet rs = checkStmt.executeQuery();
+            checkStmt.setString(2, confirmPassword); // Plaintext — hash this in production
+            rs = checkStmt.executeQuery();
 
             if (rs.next()) {
                 // Step 2: Delete the profile
-                PreparedStatement deleteStmt = conn.prepareStatement("DELETE FROM customers WHERE username = ?");
+                deleteStmt = conn.prepareStatement("DELETE FROM customers WHERE username = ?");
                 deleteStmt.setString(1, username);
                 int rows = deleteStmt.executeUpdate();
 
@@ -40,20 +44,23 @@ public class DeleteProfileServlet extends HttpServlet {
                 } else {
                     response.sendRedirect("profile.jsp?delete=error");
                 }
-
-                deleteStmt.close();
             } else {
                 // Password incorrect
                 response.sendRedirect("profile.jsp?delete=wrongpassword");
             }
 
-            rs.close();
-            checkStmt.close();
-            conn.close();
-
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
             response.sendRedirect("profile.jsp?delete=error");
+        } finally {
+            try {
+                if (rs != null) rs.close();
+                if (checkStmt != null) checkStmt.close();
+                if (deleteStmt != null) deleteStmt.close();
+                if (conn != null) conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

@@ -1,12 +1,13 @@
 package com.example.freshcart;
 
+import jakarta.servlet.annotation.MultipartConfig;
+
 import java.io.*;
 import java.sql.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
 public class EditProductServlet extends HttpServlet {
-
     // Process the HTTP POST request to update a product
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String productId = request.getParameter("product_id");
@@ -15,10 +16,10 @@ public class EditProductServlet extends HttpServlet {
         String availableStockStr = request.getParameter("available_stock");
         String description = request.getParameter("description");
         String priceStr = request.getParameter("price");
-        Part imagePart = request.getPart("image_url");
+//        Part imagePart = request.getPart("image_url");
 
         // Validate product_id
-        System.out.println("PROBLEM HERE");
+        System.out.println("PROBLEM HEREe");
         System.out.println(productId);
         System.out.println(productName);
         System.out.println(productType);
@@ -60,14 +61,14 @@ public class EditProductServlet extends HttpServlet {
         }
 
         // If image is uploaded, save it to the server
-        if (imagePart != null && imagePart.getSize() > 0) {
-            String uploadDirPath = getServletContext().getRealPath("") + File.separator + "uploads";
-            File uploadDir = new File(uploadDirPath);
-            String fileName = imagePart.getSubmittedFileName();
-            imageUrl = "uploads/" + fileName;
-            File file = new File(uploadDir, fileName);
-            imagePart.write(file.getAbsolutePath());
-        }
+//        if (imagePart != null && imagePart.getSize() > 0) {
+//            String uploadDirPath = getServletContext().getRealPath("") + File.separator + "uploads";
+//            File uploadDir = new File(uploadDirPath);
+//            String fileName = imagePart.getSubmittedFileName();
+//            imageUrl = "uploads/" + fileName;
+//            File file = new File(uploadDir, fileName);
+//            imagePart.write(file.getAbsolutePath());
+//        }
 
         Connection conn = null;
         PreparedStatement stmt = null;

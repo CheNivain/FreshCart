@@ -224,7 +224,7 @@
     <div class="modal-content">
       <span class="close-btn" onclick="closeEditForm()">&times;</span>
       <h2>Edit Product</h2>
-      <form action="EditProduct" method="POST" enctype="multipart/form-data">
+      <form action="EditProduct" method="POST" >
         <input type="hidden" id="editProductId" name="product_id">
         <input type="text" id="editProductName" name="product_name" required>
         <select id="editProductType" name="product_type" required>
@@ -240,8 +240,9 @@
         <input type="number" id="editAvailableStock" name="available_stock" min="0" required>
         <textarea id="editDescription" name="description" required></textarea>
         <input type="number" id="editPrice" name="price" step="0.01" min="0" required>
-        <label for="editImage">Upload Image</label>
-        <input type="file" id="editImage" name="image_url" accept="image/*">
+<%--        <label for="editImage">Upload Image</label>--%>
+<%--        <input type="text" id="editImage" name="image_url" placeholder="Image URL" required>--%>
+<%--        <input type="file" id="editImage" name="image_url" accept="image/*">--%>
         <button type="submit">Update Product</button>
         <button type="button" class="cancel-btn" onclick="closeEditForm()">Cancel</button>
       </form>
@@ -277,7 +278,7 @@
       console.log("Editing Product ID:", currentProduct.productId);
 
       // Populate the Edit Form with the current product details
-      document.getElementById("editProductId").setAttribute("value", currentProduct.productId);
+      document.getElementById("editProductId").value = currentProduct.productId;
       document.getElementById("editProductName").value = currentProduct.productName;
       document.getElementById("editProductType").value = currentProduct.productType;
       document.getElementById("editAvailableStock").value = currentProduct.stock;
