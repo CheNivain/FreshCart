@@ -107,10 +107,22 @@ public class RegisterAdminServlet extends HttpServlet {
             request.setAttribute("error", "Database error: " + e.getMessage());
             request.getRequestDispatcher("registerAdmin.jsp").forward(request, response);
         } finally {
-            try { if (rs != null) rs.close(); } catch (Exception e) {}
-            try { if (checkStmt != null) checkStmt.close(); } catch (Exception e) {}
-            try { if (stmt != null) stmt.close(); } catch (Exception e) {}
-            try { if (conn != null) conn.close(); } catch (Exception e) {}
+            try {
+                if (rs != null) rs.close();
+            } catch (Exception e) {
+            }
+            try {
+                if (checkStmt != null) checkStmt.close();
+            } catch (Exception e) {
+            }
+            try {
+                if (stmt != null) stmt.close();
+            } catch (Exception e) {
+            }
+            try {
+                if (conn != null) conn.close();
+            } catch (Exception e) {
+            }
         }
     }
 }

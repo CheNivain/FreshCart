@@ -147,8 +147,6 @@ button:hover {
 }
 
 
-
-
 /* Overlay */
 .overlay {
     position: fixed;
@@ -186,7 +184,7 @@ button:hover {
 .modal-content input,
 .modal-content textarea,
 .modal-content button,
-.modal-content select{
+.modal-content select {
     width: 100%;
     padding: 0.75em;
     margin-bottom: 1em;
@@ -268,13 +266,12 @@ button:hover {
 }
 
 
-
 /* Ensure all product cards are same size */
 .product-card {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     text-align: center;
     width: 100%;
@@ -294,11 +291,6 @@ button:hover {
     object-fit: cover;
     border-radius: 6px;
 }
-
-
-
-
-
 
 
 @media (max-width: 1200px) {
@@ -326,14 +318,6 @@ button:hover {
 }
 
 
-
-
-
-
-
-
-
-
 /* Modal styles */
 .modalforproduct {
     position: fixed;
@@ -344,13 +328,12 @@ button:hover {
     max-width: 600px;
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     z-index: 1001;
     padding: 20px;
     overflow-y: auto;
     max-height: 90vh;
 }
-
 
 
 /* Overlay */
@@ -360,12 +343,9 @@ button:hover {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1000;
 }
-
-
-
 
 
 /* Ensure the modal has a max width */
@@ -389,10 +369,6 @@ button:hover {
     object-fit: contain;
     margin-bottom: 15px;
 }
-
-
-
-
 
 
 product-modal-buttons {
@@ -430,13 +406,6 @@ product-modal-buttons {
 .delete-btn:hover {
     background-color: #d32f2f;
 }
-
-
-
-
-
-
-
 
 
 /* Confirm Delete Modal */
@@ -510,12 +479,6 @@ product-modal-buttons {
     color: black;
     transition: 0.2s;
 }
-
-
-
-
-
-
 
 
 .stat-card {

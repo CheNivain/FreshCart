@@ -117,7 +117,9 @@ public class EditProductServlet extends HttpServlet {
             try {
                 if (stmt != null) stmt.close();
                 if (conn != null) conn.close();
-            } catch (SQLException e) { e.printStackTrace(); }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

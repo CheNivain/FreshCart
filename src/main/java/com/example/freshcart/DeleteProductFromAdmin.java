@@ -71,9 +71,18 @@ public class DeleteProductFromAdmin extends HttpServlet {
             e.printStackTrace();
             response.getWriter().println("Database error occurred.");
         } finally {
-            try { if (rs != null) rs.close(); } catch (Exception e) {}
-            try { if (stmt != null) stmt.close(); } catch (Exception e) {}
-            try { if (conn != null) conn.close(); } catch (Exception e) {}
+            try {
+                if (rs != null) rs.close();
+            } catch (Exception e) {
+            }
+            try {
+                if (stmt != null) stmt.close();
+            } catch (Exception e) {
+            }
+            try {
+                if (conn != null) conn.close();
+            } catch (Exception e) {
+            }
         }
     }
 }

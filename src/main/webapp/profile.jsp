@@ -1,6 +1,6 @@
 <%@ page import="java.sql.*" %>
 <%@ page session="true" %>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%
     String username = (String) session.getAttribute("username");
     String firstName = "", lastName = "", email = "", phone = "", password = "";
@@ -76,20 +76,20 @@
 
 <script>
     // Automatically hide the alert message after 5 seconds
-    window.onload = function() {
+    window.onload = function () {
         var alertMessage = document.getElementById("alertMessage");
         if (alertMessage) {
-            setTimeout(function() {
+            setTimeout(function () {
                 alertMessage.style.display = "none";
             }, 5000); // 5000 milliseconds = 5 seconds
         }
     }
 
     // Automatically hide the alert message after 5 seconds
-    window.onload = function() {
+    window.onload = function () {
         var deletealertMessage = document.getElementById("deletealertMessage");
         if (deletealertMessage) {
-            setTimeout(function() {
+            setTimeout(function () {
                 deletealertMessage.style.display = "none";
             }, 5000); // 5000 milliseconds = 5 seconds
         }
@@ -119,11 +119,16 @@
     <div class="profile-card">
         <h2>Profile Details</h2>
         <div class="profile-info">
-            <p><strong>First Name:</strong> <%= firstName %></p>
-            <p><strong>Last Name:</strong> <%= lastName %></p>
-            <p><strong>Email:</strong> <%= email %></p>
-            <p><strong>Phone:</strong> <%= phone %></p>
-            <p><strong>Username:</strong> <%= username %></p>
+            <p><strong>First Name:</strong> <%= firstName %>
+            </p>
+            <p><strong>Last Name:</strong> <%= lastName %>
+            </p>
+            <p><strong>Email:</strong> <%= email %>
+            </p>
+            <p><strong>Phone:</strong> <%= phone %>
+            </p>
+            <p><strong>Username:</strong> <%= username %>
+            </p>
             <p><strong>Password:</strong> *****</p>
         </div>
 
@@ -138,11 +143,13 @@
             <div id="deleteConfirmationOverlay">
                 <div class="delete-confirmation-modal">
                     <form action="deleteProfile" method="post">
-                    <h3 style="font-size: 16px">Are you sure you want to delete your profile?</h3>
-                        <input type="password" class="confirm-password-input" id="confirmPassword" name="confirmPassword" placeholder="Enter your password" required>
+                        <h3 style="font-size: 16px">Are you sure you want to delete your profile?</h3>
+                        <input type="password" class="confirm-password-input" id="confirmPassword"
+                               name="confirmPassword" placeholder="Enter your password" required>
                         <div class="confirm-delete-buttons">
                             <button type="submit" class="confirmdeletebutton delete">Confirm Delete</button>
-                            <button type="button" class="confirmdeletebutton cancel" onclick="cancelDelete()">Cancel</button>
+                            <button type="button" class="confirmdeletebutton cancel" onclick="cancelDelete()">Cancel
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -192,7 +199,9 @@
         <div class="logo">Fresh<span>Cart</span></div>
         <br>
         <p class="footer-description">
-            At FreshCart, we believe that access to essential groceries should be simple, efficient, and stress-free. We are here to revolutionize the way you manage your shopping and receive your supplies, offering a personalized platform that connects you with our ushers of freshness.
+            At FreshCart, we believe that access to essential groceries should be simple, efficient, and stress-free. We
+            are here to revolutionize the way you manage your shopping and receive your supplies, offering a
+            personalized platform that connects you with our ushers of freshness.
         </p>
     </div>
 
@@ -236,7 +245,7 @@
         document.getElementById("editModal").classList.add("hidden");
     }
 
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         const modal = document.getElementById("editModal");
         if (event.target === modal) {
             modal.classList.add("hidden");
@@ -255,26 +264,13 @@
         }
     }
 
-        function showDeleteConfirmation() {
+    function showDeleteConfirmation() {
         document.getElementById("deleteConfirmationOverlay").style.display = "flex";
     }
 
-        function cancelDelete() {
+    function cancelDelete() {
         document.getElementById("deleteConfirmationOverlay").style.display = "none";
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </script>

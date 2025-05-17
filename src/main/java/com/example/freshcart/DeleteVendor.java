@@ -73,10 +73,22 @@ public class DeleteVendor extends HttpServlet {
             request.setAttribute("error", "Database error: " + e.getMessage());
             request.getRequestDispatcher("adminDashboard.jsp").forward(request, response);
         } finally {
-            try { if (rs != null) rs.close(); } catch (Exception e) {}
-            try { if (checkAdminStmt != null) checkAdminStmt.close(); } catch (Exception e) {}
-            try { if (deleteVendorStmt != null) deleteVendorStmt.close(); } catch (Exception e) {}
-            try { if (conn != null) conn.close(); } catch (Exception e) {}
+            try {
+                if (rs != null) rs.close();
+            } catch (Exception e) {
+            }
+            try {
+                if (checkAdminStmt != null) checkAdminStmt.close();
+            } catch (Exception e) {
+            }
+            try {
+                if (deleteVendorStmt != null) deleteVendorStmt.close();
+            } catch (Exception e) {
+            }
+            try {
+                if (conn != null) conn.close();
+            } catch (Exception e) {
+            }
         }
     }
 }

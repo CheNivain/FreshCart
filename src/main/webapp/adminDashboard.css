@@ -197,10 +197,6 @@ body {
 }
 
 
-
-
-
-
 /* Dashboard Overview Section */
 .dashboard-stats {
     display: grid;
@@ -246,7 +242,6 @@ body {
     color: #777;
     margin-bottom: 5px;
 }
-
 
 
 /* Modal Content for Add Vendor */
@@ -394,9 +389,6 @@ body {
 }
 
 
-
-
-
 product-modal-buttons {
     margin-top: 20px;
     display: flex;
@@ -434,10 +426,6 @@ product-modal-buttons {
 }
 
 
-
-
-
-
 /* Modal */
 .editfromadminmodal {
     position: fixed;
@@ -463,7 +451,7 @@ product-modal-buttons {
 .editfromadminmodal-content input,
 .editfromadminmodal-content textarea,
 .editfromadminmodal-content button,
-.editfromadminmodal-content select{
+.editfromadminmodal-content select {
     width: 100%;
     padding: 0.75em;
     margin-bottom: 1em;
@@ -565,21 +553,6 @@ product-modal-buttons {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .vendor-list-wrapper {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
@@ -598,7 +571,7 @@ product-modal-buttons {
     border-radius: 12px;
     padding: 1rem;
     background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.4s ease;
 }
@@ -619,10 +592,6 @@ product-modal-buttons {
 .vendor-card:hover {
     transform: scale(1.05); /* Zoom in by 5% */
 }
-
-
-
-
 
 
 /* Delete Vendor Modal Overlay */
@@ -727,9 +696,6 @@ product-modal-buttons {
 }
 
 
-
-
-
 .password-container {
     position: relative;
     width: 100%;
@@ -737,25 +703,17 @@ product-modal-buttons {
 
 .add-vendor-input {
     width: 100%;
-    padding-right: 40px;  /* Adjust this to make space for the icon */
+    padding-right: 40px; /* Adjust this to make space for the icon */
 }
 
 .eye-icon {
     position: absolute;
-    right: 10px;  /* Adjust the position to your liking */
+    right: 10px; /* Adjust the position to your liking */
     top: 40%;
     transform: translateY(-50%);
     cursor: pointer;
     font-size: 1.2em;
 }
-
-
-
-
-
-
-
-
 
 
 /* Modal styles */
@@ -768,13 +726,12 @@ product-modal-buttons {
     max-width: 600px;
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     z-index: 1001;
     padding: 20px;
     overflow-y: auto;
     max-height: 90vh;
 }
-
 
 
 /* Overlay */
@@ -784,12 +741,9 @@ product-modal-buttons {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 1000;
 }
-
-
-
 
 
 /* Ensure the modal has a max width */
@@ -815,10 +769,6 @@ product-modal-buttons {
 }
 
 
-
-
-
-
 .product-scroll-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 equal columns */
@@ -832,7 +782,7 @@ product-modal-buttons {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     text-align: center;
     width: 100%;
@@ -852,8 +802,6 @@ product-modal-buttons {
     object-fit: cover;
     border-radius: 6px;
 }
-
-
 
 
 /* Overlay */
@@ -893,7 +841,7 @@ product-modal-buttons {
 .productmodel-modal-content input,
 .productmodel-modal-content textarea,
 .productmodel-modal-content button,
-.productmodel-modal-content select{
+.productmodel-modal-content select {
     width: 100%;
     padding: 0.75em;
     margin-bottom: 1em;
